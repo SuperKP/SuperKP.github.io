@@ -217,7 +217,7 @@ autoCreateIssue = false
 # Waline 配置（轻量级评论系统）
 [comments.waline]
 # Waline 服务器地址
-serverURL = "https://9kassoj1.api.lncldglobal.com"
+serverURL = "https://waline-revoudafc-superkps-projects.vercel.app"
 # 界面语言
 lang = "zh-CN"
 # 是否启用访客统计
