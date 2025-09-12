@@ -245,7 +245,7 @@ region = ""
 # 评论路径（可选）
 path = ""
 # 界面语言
-lang = "zh-CN""
+lang = "zh-CN"
 
 # Cactus 配置（基于 Matrix）
 [comments.cactus]
