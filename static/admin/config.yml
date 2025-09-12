@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: master                 # 文章提交的分支
+
+media_folder: "static/images/uploads"   # 上传图片保存的位置
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"          # 后台管理的集合名
+    label: "Blog"         # 界面显示的名字
+    folder: "content/post"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
