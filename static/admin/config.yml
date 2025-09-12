@@ -6,12 +6,25 @@ media_folder: "static/images/uploads"   # 上传图片保存的位置
 public_folder: "/images/uploads"
 
 collections:
-  - name: "blog"          # 后台管理的集合名
-    label: "Blog"         # 界面显示的名字
+  - name: "blog"
+    label: "Blog Posts"
     folder: "content/post"
     create: true
-    slug: "{{slug}}"
+    # 这里用 nested，让 CMS 在新建时为每篇文章建立目录
+    nested:
+      depth: 100         # 允许目录嵌套
+      summary: "{{title}}"
+    slug: "{{slug}}"     # 每篇文章目录的名字
+    path: "{{slug}}/index"   # 关键！新文章文件名固定为 index.md
+    media_folder: ""     # 图片存在文章目录下
+    public_folder: ""    # 图片引用相对路径
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Weight", name: "weight", widget: "number", default: 1 }
       - { label: "Body", name: "body", widget: "markdown" }
