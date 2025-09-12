@@ -166,7 +166,7 @@ enabled = true
 # 是否启用评论功能
 enabled = true
 # 评论系统提供商：disqus、utterances、giscus、waline 等
-provider = "waline"
+provider = "cusdis"
 
 # Disqus 配置
 [comments.disqusjs]
@@ -245,7 +245,7 @@ region = ""
 # 评论路径（可选）
 path = ""
 # 界面语言
-lang = ""
+lang = "zh-CN""
 
 # Cactus 配置（基于 Matrix）
 [comments.cactus]
@@ -293,6 +293,6 @@ clientSecret = ""
 # Cusdis 配置（轻量级评论系统）
 [comments.cusdis]
 # Cusdis 服务器地址
-host = ""
+host = "https://cusdis.com"
 # 站点 ID
-id = ""
+id = "22b3f6b9-d303-41eb-87bd-46bb804c8e42"
