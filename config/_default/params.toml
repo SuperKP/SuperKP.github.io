@@ -166,7 +166,7 @@ enabled = true
 # 是否启用评论功能
 enabled = true
 # 评论系统提供商：disqus、utterances、giscus、waline 等
-provider = "disqus"
+provider = "waline"
 
 # Disqus 配置
 [comments.disqusjs]
@@ -217,19 +217,19 @@ autoCreateIssue = false
 # Waline 配置（轻量级评论系统）
 [comments.waline]
 # Waline 服务器地址
-serverURL = ""
+serverURL = "https://9kassoj1.api.lncldglobal.com"
 # 界面语言
-lang = ""
+lang = "zh-CN"
 # 是否启用访客统计
-visitor = ""
+visitor = "true"
 # 默认头像设置
-avatar = ""
+avatar = "retro"
 # 表情包 CDN 地址
 emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
 # 必填字段：["nick"、"mail"、"link"] 的子集
 requiredMeta = ["name", "email", "url"]
 # 评论框占位符文本
-placeholder = ""
+placeholder = "欢迎留言👏"
 
 # Waline 本地化配置
 [comments.waline.locale]
