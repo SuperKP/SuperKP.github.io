@@ -2,17 +2,17 @@ backend:
   name: github
   repo: superkp/superkp.github.io   # 用户名/仓库名
   branch: master
-  base_url: https://decap-proxy.supekp.workers.dev   # 这个等会儿再改
+  base_url: https://decap-proxy.supekp.workers.dev   # 修正为你部署的 Worker 地址
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "content/post/{{slug}}"       # 每篇文章的媒体文件放在自己文章的文件夹
+public_folder: "/images/uploads/{{slug}}"   # 对应的公开路径
 
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "content/post"
+    folder: "content/post"          # 文章存放的主目录
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}"                # 用 slug 创建文章文件夹
     extension: "md"
     format: "frontmatter"
     fields:
