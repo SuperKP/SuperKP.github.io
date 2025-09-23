@@ -1,8 +1,10 @@
 backend:
-  name: git-gateway
-  branch: master                 # 文章提交的分支
+  name: github
+  repo: superkp/superkp.github.io   # 用户名/仓库名
+  branch: master
+  base_url: https://decap-proxy.superkp.workers.dev   # 这个等会儿再改
 
-media_folder: "static/images/uploads"   # 上传图片保存的位置
+media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
@@ -10,18 +12,12 @@ collections:
     label: "Blog Posts"
     folder: "content/post"
     create: true
-    # 这里用 nested，让 CMS 在新建时为每篇文章建立目录
-    nested:
-      depth: 100         # 允许目录嵌套
-      summary: "{{title}}"
-    slug: "{{slug}}"     # 每篇文章目录的名字
-    path: "{{slug}}/index"   # 关键！新文章文件名固定为 index.md
-    media_folder: ""     # 图片存在文章目录下
-    public_folder: ""    # 图片引用相对路径
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Cover Image", name: "image", widget: "image" }
       - { label: "Categories", name: "categories", widget: "list" }
