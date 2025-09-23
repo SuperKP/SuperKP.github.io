@@ -2,7 +2,7 @@ backend:
   name: github
   repo: superkp/superkp.github.io   # 用户名/仓库名
   branch: master
-  base_url: https://decap-proxy.superkp.workers.dev   # 这个等会儿再改
+  base_url: https://decap-proxy.supekp.workers.dev   # 这个等会儿再改
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
