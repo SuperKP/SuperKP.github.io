@@ -8,7 +8,7 @@
 #newtab = true
 
 [[social]]
-identifier = "github"
+identifier = "github-superkp"
 name = "GitHub-SuperKP"
 url = "https://github.com/SuperKP"
 
@@ -16,17 +16,17 @@ url = "https://github.com/SuperKP"
 icon = "brand-github"
 
 [[social]]
-identifier = "github"
+identifier = "github-kokodaiyo"
 name = "GitHub-kokodaiyo"
 url = "https://github.com/kokodaiyo"
 
 [social.params]
 icon = "brand-github"
 
-[[social]]
-identifier = "twitter"
-name = "Twitter"
-url = "https://twitter.com"
+#[[social]]
+#identifier = "twitter"
+#name = "Twitter"
+#url = "https://twitter.com"
 
-[social.params]
-icon = "brand-twitter"
+#[social.params]
+#icon = "brand-twitter"
