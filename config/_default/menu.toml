@@ -9,8 +9,16 @@
 
 [[social]]
 identifier = "github"
-name = "GitHub"
-url = "https://github.com/CaiJimmy/hugo-theme-stack"
+name = "GitHub-SuperKP"
+url = "https://github.com/SuperKP"
+
+[social.params]
+icon = "brand-github"
+
+[[social]]
+identifier = "github"
+name = "GitHub-kokodaiyo"
+url = "https://github.com/kokodaiyo"
 
 [social.params]
 icon = "brand-github"
