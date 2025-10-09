@@ -1,7 +1,7 @@
 ---
 title: Let's start our Blog trip!
-description: it takes two
-slug: life
+description: Description
+slug: Slug
 date: 2025-10-09T21:27:00.000+08:00
 image: 微信图片_20251009213020.png
 weight: 1
