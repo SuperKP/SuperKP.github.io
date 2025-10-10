@@ -4,6 +4,10 @@ description: Useful shortcodes that can be used in Markdown
 slug: Shortcodes
 date: 2025-10-09T22:56:00.000+08:00
 image: cover.jpg
+categories:
+  - Example
+tags:
+  - Example
 weight: 1
 ---
 
