@@ -5,9 +5,9 @@ slug: hello-world
 date: 2025-09-12T15:55:00.000+08:00
 image: cover.jpg
 categories:
-  - Example Category
+  - Example
 tags:
-  - Example Tag
+  - Example
 weight: 1
 ---
 
