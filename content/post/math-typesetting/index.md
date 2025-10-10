@@ -3,8 +3,12 @@ title: Math Typesetting
 description: Math typesetting using KaTeX
 date: 2023-08-24 00:00:00+0000
 math: true
+categories:
+  - Example
+tags:
+  - Example
+weight: 1
 ---
-
 Stack has built-in support for math typesetting using [KaTeX](https://katex.org/).
 
 **It's not enabled by default side-wide,** but you can enable it for individual posts by adding `math: true` to the front matter. Or you can enable it side-wide by adding `math = true` to the `params.article` section in `config.toml`.
@@ -30,7 +34,7 @@ $$
 ```
 
 $$
-    f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+    f(x) = \int_{-\infty}^\infty\hat f(\xi),e^{2 \pi i \xi x},d\xi
 $$
 
 ```markdown
