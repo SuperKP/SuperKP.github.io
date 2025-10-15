@@ -1,0 +1,42 @@
+<div class="widget recent-modified">
+  <h3 class="widget-title">
+    {{/* 先检查 widget 局部 params，再检查 site params */}}
+    {{ if .params.title }}
+      {{ .params.title }}
+    {{ else if .Params.title }}
+      {{ .Params.title }}
+    {{ else }}
+      最近更新
+    {{ end }}
+  </h3>
+
+  {{/* 设置默认 limit 并允许覆盖 */}}
+  {{ $.Scratch.Set "limit" 5 }}
+  {{ with .params.limit }}{{ $.Scratch.Set "limit" . }}{{ else }}{{ with .Params.limit }}{{ $.Scratch.Set "limit" . }}{{ end }}{{ end }}
+  {{ $limit := ($.Scratch.Get "limit") | int }}
+
+  <ul class="recent-modified-list">
+    {{/* 根据需要调整 where 过滤（此处只显示 Section 为 post 的页面） */}}
+    {{ $pages := where .Site.RegularPages "Section" "post" }}
+    {{ $sorted := sort $pages "Lastmod" "desc" }}
+    {{ range first $limit $sorted }}
+      <li class="recent-item">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="recent-date">
+          {{ if .Lastmod }}
+            {{ .Lastmod.Format "2006-01-02" }}
+          {{ else }}
+            {{ .Date.Format "2006-01-02" }}
+          {{ end }}
+        </span>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+
+<style>
+.widget.recent-modified .recent-modified-list { padding: 0; margin: 0; list-style: none; }
+.widget.recent-modified .recent-item { display:flex; justify-content:space-between; padding:4px 0; border-bottom: 1px dashed rgba(0,0,0,0.03); }
+.widget.recent-modified .recent-item a { flex:1; text-decoration:none; color:inherit; }
+.widget.recent-modified .recent-date { margin-left:8px; white-space:nowrap; color: #888; font-size: 0.9em; }
+</style>
