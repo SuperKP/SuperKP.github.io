@@ -1,5 +1,5 @@
 ---
-title: Step into Landscape Photography
+title: Phtotgraphy01——Step into Landscape Photography
 date: 2025-10-23T00:31:00.000+08:00
 categories:
   - Photography
@@ -27,4 +27,4 @@ weight: 1
 
 最后引用泰罗的一句话阐述，摄影后期的三个层次就是，**简单矫正，还原眼睛之所见；局部修饰，还原脑海之所现；艺术加工，还原心中之所想**。心有所想，用术还原
 
-![image-20251022232533928](image-20251022232533928.png)
+![过曝的光线反而营造出了光线灿烂的效果](image-20251022232533928.png "《冰川幻境》——Thomas看看世界")
