@@ -178,6 +178,36 @@ public enum Singleton {
 Singleton singleton = Singleton.INSTANCE;
 ```
 
+在上面的例子中，Singleton 是一个枚举类，并且它只包含一个枚举常量 INSTANCE，这个常量即代表了单例模式的唯一实例。
+
+特点：
+
+- **线程安全：** 枚举类的实例是在类加载时创建的，且由于 Java 的枚举类型是天然线程安全的，枚举实例的创建是由 JVM 保证的，不需要任何同步机制。
+  
+- **防止反射攻击**：反射机制无法破坏枚举的单例性，因为调用 enum 的构造器会抛出异常。
+  
+- **防止序列化破坏**：枚举类本质上是不可序列化的，且即使通过序列化反序列化也不会创建新的实例，因为枚举类的 readResolve() 方法已经由 JVM 内部自动实现，保证了枚举实例的唯一性。
+  
+
+可以使用枚举持有一个已有类的实例，进行单例管理。本质就是提供一个单例的类管理器，其中持有一个唯一实例：
+
+```java
+public enum SingletonManager {
+    INSTANCE;
+
+    private final Singleton instance;
+
+    // 初始化已有类实例
+    SingletonManager() {
+        instance = new Singleton();  
+    }
+
+    public ConfigManager getInstance() {
+        return instance;
+    }
+}
+```
+
 #### 存在的问题
 
 ##### 破坏单例模式
