@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Algorithm on Kkun's Blog</title><link>https://superkp.github.io/categories/algorithm/</link><description>Recent content in Algorithm on Kkun's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 22 Oct 2025 16:39:00 +0800</lastBuildDate><atom:link href="https://superkp.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>From Sliding Window to Algorithm</title><link>https://superkp.github.io/p/from-sliding-window-to-algorithm/</link><pubDate>Wed, 22 Oct 2025 16:39:00 +0800</pubDate><guid>https://superkp.github.io/p/from-sliding-window-to-algorithm/</guid><description>&lt;img src="https://superkp.github.io/p/from-sliding-window-to-algorithm/sliding-window.jpg" alt="Featured image of post From Sliding Window to Algorithm" /&gt;&lt;p&gt;滑动窗口（Sliding Window）是在面对数组和字符串题目时常见的方法与思路，在面对“具有某种特征的子区间”相关问题处理时尤其有效。其核心思想是在序列上维护一个**“窗口”&lt;strong&gt;，“窗口”内包含的是满足题目特征的子序列。通过“窗口”的滑动，实现对序列的快速遍历与处理。这里的处理通常指的是针对于具有某种特征的子序列的查找。因而，解决&lt;/strong&gt;具有某种特征的连续子序列查找问题**是滑动窗口方法主要的应用，而这也是数组和字符串题目的一大重点内容。&lt;/p&gt;
+&lt;p&gt;例如，在题目&lt;a class="link" href="https://leetcode.cn/problems/maximum-length-substring-with-two-occurrences/" target="_blank" rel="noopener"
+&gt;3090. 每个字符最多出现两次的最长子字符串&lt;/a&gt;中，“每个字符最多出现两次”就是题目对于子序列的要求，需要做的就是遍历查找这样的子序列的最大长度。&lt;/p&gt;
+&lt;p&gt;滑动窗口方法通常分为&lt;strong&gt;定长滑动窗口&lt;/strong&gt;和&lt;strong&gt;动态滑动窗口&lt;/strong&gt;两种基本窗口模式，题目中会以明确的子序列长度限制进行区分。前者相对更简单，一般只需要滑动定长窗口，对窗口内元素进行统计；后者由于窗口长度动态，涉及窗口内元素的动态添加与移除，但也有相对固定的模式和框架可以进行总结。&lt;/p&gt;
+&lt;p&gt;本文剩下部分将从定长滑动窗口、动态滑动窗口两种基本窗口模式入手，分别介绍其基本思路、算法框架与例题。&lt;/p&gt;
+&lt;h1 id="定长滑动窗口"&gt;定长滑动窗口
+&lt;/h1&gt;&lt;h1 id="动态滑动窗口"&gt;动态滑动窗口
+&lt;/h1&gt;&lt;h2 id="求子序列最长最大"&gt;求子序列最长/最大
+&lt;/h2&gt;&lt;h2 id="求子序列最短最小"&gt;求子序列最短/最小
+&lt;/h2&gt;&lt;h2 id="求子数组个数"&gt;求子数组个数
+&lt;/h2&gt;</description></item></channel></rss>

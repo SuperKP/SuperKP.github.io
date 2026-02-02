@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: superkp/superkp.github.io   # 用户名/仓库名
+  branch: master
+  base_url: https://decap-proxy.supekp.workers.dev   # 使用你的 Cloudflare Worker 代理地址
+
+media_folder: ""        # 图片保存在文章目录下
+public_folder: ""       # 图片引用使用相对路径
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/post"        # 博文目录
+    create: true
+    slug: "{{slug}}"              # 每篇文章目录名
+    path: "{{slug}}/index"        # 关键！文章文件名固定为 index.md
+    nested:
+      depth: 100                  # 允许嵌套目录
+      summary: "{{title}}"        # 在 CMS 列表中显示标题
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Categories", name: "categories", widget: "list", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false}
+      - { label: "Weight", name: "weight", widget: "number", default: 1, required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
